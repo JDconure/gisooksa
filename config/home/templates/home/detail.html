@@ -1,0 +1,23 @@
+<h1>{{ person.person_text }}</h1>
+<html lang="ko">
+  <head>
+  <meta charset="utf-8">
+    <title>HTML</title>
+    <style>
+      * {
+        font-size: 16px;
+        font-family: Consolas, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="get" action="{% url 'home:index' %}">
+    {% csrf_token %}
+      <label>외출 시간 : <input type="text" name="time"></label>
+      <input type="submit" value="수정">
+      <button onclick="location.href='http://127.0.0.1:8000/home/'">홈</button >
+      <a>_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</a>
+      <input type="'hidden" name="per" value="{{ person.id }}"></input>
+    </form>
+  </body>
+</html>
